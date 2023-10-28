@@ -1,2 +1,2 @@
 # rs_dec
-AnRS-FEC Decoder
+An RS-FEC Decoder
