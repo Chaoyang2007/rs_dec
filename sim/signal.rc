@@ -1,0 +1,417 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 2064 687 234 63
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/scott/project/rsfec_dec_v1/sim/inter.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 434502.000000
+cursor 427200.000000
+marker 229200.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 72
+
+; logical expression list
+; addExprSig expr_name expression_string
+activeDirFile "" "/home/scott/project/rsfec_dec_v1/sim/inter.fsdb"
+
+addExprSig -b 64 -n UU logical_expression_1[63:0] "/top/u_rs_decoder/rx_data[63:0]"- "/top/u_rs_decoder/rx_data_1t[63:0]\
+"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 64 -n UU syn_vld_data0[63:0] {64{"/top/u_rs_decoder/rx_data_vld"}}& "/top/u_rs_decoder/syn_data0[63\
+:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/syn_data[63:0]" "/syn_vld_data0[63:0]" keep
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 1 -n U syn_data_nz "/syn_data[63:0]"!=64'b0
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_7[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_6[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_5[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_4[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_3[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_2[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_1[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data0_0[0]
+saveRunSig "data0[63:0]"
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_7[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_6[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_5[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_4[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_3[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_2[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_1[0]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[7]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[6]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[5]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[4]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[3]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[2]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[1]
+userBusMem /top/u_rs_decoder/u_s1_syncal/data1_0[0]
+saveRunSig "data1[63:0]"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 64 -n UU vld_data0[63:0] {64{"/top/u_rs_decoder/u_s1_syncal/data_vld"}}& "/data0[63:0]"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 8 -n UU vld_s0_next[7:0] {8{"/top/u_rs_decoder/u_s1_syncal/data_vld"}}& "/top/u_rs_decoder/u_s1\
+_syncal/syn0_next[7:0]"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 8 -n UU vld_s1_next[7:0] {8{"/top/u_rs_decoder/u_s1_syncal/data_vld"}}& "/top/u_rs_decoder/u_s1\
+_syncal/syn1_next[7:0]"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 8 -n UU vld_s2_next[7:0] {8{"/top/u_rs_decoder/u_s1_syncal/data_vld"}}& "/top/u_rs_decoder/u_s1\
+_syncal/syn2_next[7:0]"
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 8 -n UU vld_s3_next[7:0] {8{"/top/u_rs_decoder/u_s1_syncal/data_vld"}}& "/top/u_rs_decoder/u_s1\
+_syncal/syn3_next[7:0]"
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname s2_kes.dcme_state
+nalias S0		4'b0001		NULL
+nalias S2		4'b0100		NULL
+nalias S1		4'b0010		NULL
+nalias S3		4'b1000		NULL
+
+addGroup "decoder if"
+activeDirFile "" "/home/scott/project/rsfec_dec_v1/sim/inter.fsdb"
+addSignal -h 15 /top/u_rs_decoder/clk
+addSignal -h 15 /top/u_rs_decoder/rstn
+addSignal -h 15 /top/u_rs_decoder/rsfec_ena
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/rx_data_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/rx_data[63:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/dec_data_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/dec_data[63:0]
+addSignal -h 15 /top/u_rs_decoder/dec_isos
+addSignal -h 15 /top/u_rs_decoder/rde_error
+addGroup "data re-arrange"
+addSignal -h 15 /top/u_rs_decoder/clk
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/rx_data_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/rx_data[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/rx_data_1t[63:0]
+addSignal -h 15 -UNSIGNED -HEX /logical_expression_1[63:0]
+addSignal -h 15 /top/u_rs_decoder/syn_data_init
+addSignal -h 15 /top/u_rs_decoder/syn_data_last
+addSignal -h 15 /top/u_rs_decoder/syn_data_last0
+addSignal -h 15 /top/u_rs_decoder/syn_data_last1
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/counter_rx_len0[1:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/counter_rx_len1[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/syn_data0[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/syn_data1[63:0]
+addSignal -h 15 -UNSIGNED -HEX /syn_data[63:0]
+addSignal -h 15 /syn_data_nz
+addGroup "s1_syncal if"
+addSubGroup "s1_syncal if-1"
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/counter_it[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s1_syncal/syn_data0[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s1_syncal/syn_data0_1t[7:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/syn_data1[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/data_vld
+addSignal -h 15 -UNSIGNED -HEX /data0[63:0]
+addSignal -h 15 -UNSIGNED -HEX /data1[63:0]
+addSignal -h 15 -UNSIGNED -HEX /vld_data0[63:0]
+endSubGroup "s1_syncal if-1"
+addSubGroup "s1_syncal if-2" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/counter_it[4:0]
+addSignal -c ID_ORANGE6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn0_temp[7:0]
+addSignal -c ID_ORANGE6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn1_temp[7:0]
+addSignal -c ID_ORANGE6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn2_temp[7:0]
+addSignal -c ID_ORANGE6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn3_temp[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn0_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn1_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn2_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn3_next[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /vld_s0_next[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /vld_s1_next[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /vld_s2_next[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /vld_s3_next[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/counter_it[4:0]
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_done
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_nerror
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_error
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn0_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn1_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn2_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn3_temp[7:0]
+endSubGroup "s1_syncal if-2"
+addSubGroup "s1_syncal if-3"
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/clk
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_temp_clk
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn0_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn1_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn2_temp[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/syn3_temp[7:0]
+endSubGroup "s1_syncal if-3"
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/clk
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/rstn
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/rs_ena
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/data_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s1_syncal/syn_data0[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s1_syncal/syn_data1[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/data_init
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/data_last0
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/data_last1
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/rs_syn0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/rs_syn1[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/rs_syn2[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s1_syncal/rs_syn3[7:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_s1_syncal/syn_error
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_nerror
+addSignal -h 15 /top/u_rs_decoder/u_s1_syncal/syn_done
+addGroup "s2_kes if"
+addSignal -h 15 /top/u_rs_decoder/u_s2_kes/clk
+addSignal -h 15 /top/u_rs_decoder/u_s2_kes/rstn
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_syn0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_syn1[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_syn2[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_syn3[7:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_s2_kes/kes_ena
+addSubGroup "s2_kes if-1"
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/msb_R[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/msb_Q[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/deg_R_next[2:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/deg_Q_next[2:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R0_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R1_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R2_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R3_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R4_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R5_next[7:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_R6_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q0_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q1_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q2_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q3_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q4_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q5_next[7:0]
+addSignal -c ID_YELLOW6 -ls solid -lw 1 -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/reg_Q6_next[7:0]
+endSubGroup "s2_kes if-1"
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_lambda0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_lambda1[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_lambda2[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_omega0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s2_kes/rs_omega1[7:0]
+addSignal -h 15 /top/u_rs_decoder/u_s2_kes/kes_done
+addGroup "s3_csee if"
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/clk
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/rstn
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/rs_ena
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/csee_ena
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/rs_lambda0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/rs_lambda1[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/rs_lambda2[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/rs_omega0[7:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/rs_omega1[7:0]
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/csee_ongo
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s3_csee/rs_errdata[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_s3_csee/rs_syncbit[11:0]
+addSignal -h 15 /top/u_rs_decoder/u_s3_csee/rsdec_fail
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_s3_csee/counter_it[4:0]
+addGroup "rs_fifo if"
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/clk
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/rstn
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/push_data_ena
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_data0[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_data1[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_last0
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_last1
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/rs_errdata_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_errdata[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/rs_syncbit_vld
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_syncbit[11:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/pop_data_ena
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/rs_pop_data_vld
+addSignal -h 15 /top/u_rs_decoder/dec_data_rd_init
+addSignal -h 15 /top/u_rs_decoder/dec_data_rd_done
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/counter_rd_len[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/data_rd_addr[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_errdata[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_aw_empty
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/push_data_ena
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/rs_errdata_vld
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/u_rs_fifo/pop_data_ena
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /top/u_rs_decoder/dec_data_vld
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_last
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_last0
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/data_last1
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/data_aw_ptr[5:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/data_wr_ptr[5:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/data_rd_ptr[5:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/isos_wr_ptr[1:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/isos_aw_ptr[1:0]
+addSignal -h 15 -UNSIGNED -UDEC /top/u_rs_decoder/u_rs_fifo/isos_rd_ptr[1:0]
+addSignal -h 15 -UNSIGNED -HEX /top/u_rs_decoder/u_rs_fifo/rs_pop_data[63:0]
+addSignal -h 15 /top/u_rs_decoder/u_rs_fifo/rs_pop_isos
+addGroup "G7"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
