@@ -16,19 +16,10 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`ifndef UTILS
-`define UTILS
-`include "../src/rs_utils.v"
-`endif
 
 `ifndef D
 `define D #0.2
 `endif
-
-`include "../src/rs_fifo.v"
-`include "../src/s1_syncal_p8.v"
-`include "../src/s2_kes_dcme.v"
-`include "../src/s3_csee_p8.v"
 
 
 module rs_decoder (

@@ -1,1 +1,0 @@
-/home/scott/project/rsfec_dec_v1/tb/top.sv

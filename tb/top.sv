@@ -1,13 +1,11 @@
-//~ `New testbench
 `timescale  1ns / 1ps
 
-`include "../src/rs_decoder.v"
 
 module top;
 
+
 // rs_decoder Parameters
 parameter PERIOD  = 2;
-
 
 // rs_decoder Inputs
 reg   clk                                  = 0 ;

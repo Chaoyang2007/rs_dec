@@ -16,10 +16,6 @@
 // Additional Comments:
 // 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
-`ifndef UTILS
-`define UTILS
-`include "../src/rs_utils.v"
-`endif
 
 `ifndef D
 `define D #0.2

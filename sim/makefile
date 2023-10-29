@@ -1,20 +1,29 @@
-VCS = vcs top.sv	-full64 -sverilog +v2k \
-			-l elab.log \
-			-debug_acc+all \
-			-kdb -lca \
-			+lint=TFIPC-L \
-			-work work_dut
+VCS = vcs	-full64 -sverilog +v2k \
+		-l elab.log \
+		-debug_acc+all \
+		-kdb -lca \
+		+lint=TFIPC-L \
+		-work work_dut 
 
-VERDI = ./simv 	+fsdb+functions \
+SIM = ./simv 	+fsdb+functions \
 		-ucli -i dump.tcl \
-		-l irun.log \
-		-gui=verdi
+		-l irun.log 
+
+VERDI = verdi	-full64 -dbdir ./simv.daidir
 
 comp:
-	$(VCS)
+	$(VCS)	-f filelist.f
+
+sim:
+	$(SIM)
+#	$(SIM)	-gui=verdi
+
+run:
+	comp sim
 
 verdi:
 	$(VERDI)
+#	$(VERDI) -ssf twave.fsdb
 
 clean:
 	rm -rf csrc simv* *.lib *.lib++ nLint* novas*
