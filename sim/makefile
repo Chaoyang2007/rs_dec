@@ -18,8 +18,7 @@ sim:
 	$(SIM)
 #	$(SIM)	-gui=verdi
 
-run:
-	comp sim
+run:	comp sim
 
 verdi:
 	$(VERDI)
