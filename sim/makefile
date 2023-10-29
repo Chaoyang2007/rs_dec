@@ -11,15 +11,14 @@ SIM = ./simv 	+fsdb+functions \
 
 VERDI = verdi	-full64 -dbdir ./simv.daidir
 
+run:	comp sim
+
 comp:
 	$(VCS)	-f filelist.f
 
 sim:
 	$(SIM)
 #	$(SIM)	-gui=verdi
-
-run:
-	comp sim
 
 verdi:
 	$(VERDI)
