@@ -1,4 +1,5 @@
 ../tb/top.sv
+../src/define.v
 ../src/s1_syncal_p8.v
 ../src/rs_fifo.v
 ../src/s2_kes_dcme.v
