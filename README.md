@@ -1,2 +1,2 @@
 # rs_dec
-An RS-FEC Decoder
+An RS-FEC Decoder in USB4 Logic Layer Data Link
